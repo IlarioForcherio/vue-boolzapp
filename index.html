@@ -25,19 +25,19 @@
             <div class="left-cnt">
                 <div class="left-top d-flex align-items-center">
                     <!-- avatar -->
-                    <div class="avatar-img">
+                    <div class="avatar-img ps-2">
                         <img src="./assets/img/avatar_io.jpg" alt="">
                         <span>Sofia</span>
                     </div>
                     <!-- avatar-icons -->
-                    <div class="avatar-icons d-flex">
+                    <div class="avatar-icons d-flex pe-2">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
                 <!-- notifications -->
-                <div class="notifications d-flex align-items-center ">
+                <div class="notifications d-flex align-items-center">
                     <div>
                         <i class="fa-solid fa-bell-slash ms-3"></i>
                     </div>
@@ -49,7 +49,7 @@
 
                 </div>
                 <!-- Input-search-chat -->
-                <div class="mt-2  input-group input-left">
+                <div class="input-group input-left">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
                         aria-label="Username" aria-describedby="basic-addon1">
@@ -63,7 +63,7 @@
                                 <div class="d-flex align-items-center">
 
                                     <img :src=" imgPath + element.avatar + '.jpg' " alt=“”>
-                                    <div>
+                                    <div class="ps-2">
                                         <div>{{element.name}}</div>
                                         <div class="cards-text">Ultimo messaggio inviato</div>
                                     </div>
@@ -79,12 +79,20 @@
             </div>
             <!-- RIGHT-CNT -->
             <div class="right-cnt">
-                <!-- right-top -->
-                <div class="right-top d-flex align-items-center justify-content-between">
-                    <div>
-                        utete cliccato
+                <!-- Right-top -->
+                <div class="ps-2 right-top d-flex align-items-center justify-content-between">
+                    <!-- Card-top -->
+                    <div class="card-top-right d-flex">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/img/avatar_2.jpg" alt=“”>
+                            <div class="ps-2">
+                                <div>nome</div>
+                                <div class="cards-text">Ultimo accesso oggi alle 12:00</div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- right-icons -->
+   
+                    <!-- Right-icons -->
                     <div class="right-icons pe-4">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip"></i>
@@ -92,16 +100,16 @@
                     </div>
                 </div>
                 <div class="right-main d-flex align-items-end">
-                    <!-- message-cnt -->
+                    <!-- Message-cnt -->
                     <div class="message-cnt d-flex justify-content-around">
-                        <!-- white-msg -->
+                        <!-- White-msg -->
                         <div>
                             <div class="white-msg d-flex align-items-end justify-content-between">
                                 <span class="msg-text">Tutto fatto!</span>
                                 <span class="msg-hour ">10.15</span>
                             </div>
                         </div>
-                        <!-- green-msg -->
+                        <!-- Green-msg -->
                         <div>
                             <div class="green-msg d-flex align-items-end justify-content-between">
                                 <span class="msg-text">Hai portato a spasso il cane? </span>
@@ -115,16 +123,16 @@
                         </div>
                     </div>
                 </div>
-                <!-- right-bottom -->
+                <!-- Right-bottom -->
                 <div class="right-bottom d-flex align-items-center justify-content-center justify-content-between">
-                    <!-- smile -->
+                    <!-- Smile -->
                     <i class="ps-3 pe-4 fa-regular fa-face-smile"></i>
-                    <!-- input -->
+                    <!-- Input -->
                     <div class="input-group ">
                         <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username"
                             aria-describedby="basic-addon1">
                     </div>
-                    <!-- microphone -->
+                    <!-- Microphone -->
                     <i class="pe-3 ps-4 fa-solid fa-microphone"></i>
                 </div>
             </div>

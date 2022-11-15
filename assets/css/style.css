@@ -41,6 +41,7 @@ flex-basis: 30%;
 }
 
 .avatar-img img {
+    
     width: 20%;
     border-radius: 50%;
 }
@@ -110,7 +111,7 @@ flex-basis: 30%;
 
 .cards-text,.cards-time{
     color: rgb(194, 199, 207);
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .cards img{
@@ -133,6 +134,11 @@ flex-basis: 30%;
 .right-top{
     height: 10%;
     background-color:  rgb(234, 234, 234) ;
+}
+
+.card-top-right img{
+    width: 8%;
+    border-radius: 50%;
 }
 
 .right-icons{
