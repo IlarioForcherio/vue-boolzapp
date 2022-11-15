@@ -2,6 +2,10 @@ var app = new Vue (
     {
         el: '#root',
         data: {
+
+
+           imgPath: '../assets/img/avatar',
+           imgPathext: '.jpg',
             
             contacts: [
                 {
@@ -165,16 +169,17 @@ var app = new Vue (
                         }
                     ],
                 }
-            ]
+            ],
+
+         
+
         },
 
-        imgPath: '../img/avatar',
-        imgExtension: '../img/.jpg',
 
 
         methods: {
 
-            
+
 
         },
     }

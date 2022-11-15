@@ -57,8 +57,11 @@
                 </div>
                 <!-- Contacts -->
                 <div class="contacts">
-                    <ul v-for="(element,index) in contacts">
-                     <li>{{element.name}}</li>
+                    <ul>
+                     <li v-for="element in contacts" class="list-group list-group-item list-group-item-action">
+                     <img :src=" imgPath + element.avatar + '.jpg' " alt=“”>
+                    {{element.name}}
+                    </li>
                     </ul>
                 </div>
 
@@ -67,7 +70,9 @@
             <div class="right-cnt">
                 <!-- right-top -->
                 <div class="right-top d-flex align-items-center justify-content-between">
-                    <div>utente</div>
+                    <div>
+                       <img :src="imgPath" alt="">
+                    </div>
                     <!-- right-icons -->
                     <div class="right-icons pe-4">
                     <i class="fa-solid fa-magnifying-glass"></i>

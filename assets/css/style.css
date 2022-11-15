@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style: none;
+}
+
 body{
 background: rgb(35,150,136);
 background: linear-gradient(180deg, rgba(35,150,136,1) 0%, rgba(219,219,210,1) 35%);
@@ -72,7 +76,6 @@ flex-basis: 30%;
 /* search-bar */
 
 .input-left{
-    
     border: 1px solid#ced4da;
 }
 
@@ -89,8 +92,24 @@ flex-basis: 30%;
 /* contacts */
 
 .contacts{
+    overflow-y: auto;
     background-color: white;
     height: 72%; 
+}
+
+.contacts ul{
+    padding:8px 8px;
+}
+
+
+.contacts img{
+    width: 20%;
+    border-radius: 50%;
+    padding: 5px 0px;
+}
+
+.list-group-item{
+    border:0px;
 }
 
 /* RIGHT-SIDE */
