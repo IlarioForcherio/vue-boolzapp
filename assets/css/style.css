@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+background: rgb(35,150,136);
+background: linear-gradient(180deg, rgba(35,150,136,1) 0%, rgba(219,219,210,1) 35%);
+}
+
+.cnt-100{  
+height: 100vh;
+}
+
+.main-cnt{
+    width: 80vw;
+    border: 1px solid black;
+}
+
+.cont-left,.cnt-right,.main-cnt{
+ height: 95vh;  
+}
+
+.left-cnt{  
+flex-basis: 30%;      
+border: 1px solid black;
+}
+.right-cnt{
+   flex-basis: 70%;  
+   border: 1px solid black;
+}
+.left-top{
+    height: 60px;
+    background-color: blue;
+}
+.right-top{
+    height: 60px;
+    background-color: blue;
+}
+.notifications{
+    height: 60px;
+    background-color: rgb(152, 152, 234);
+}
+
+.contacts{
+    background-color: rgb(33, 245, 227);
+    height: 72vh; 
+}
+
+.right-main{
+    background-color: rgb(117, 240, 131);
+    height: 80vh;
+}
+
+.right-bottom{
+    background-color: rgb(240, 117, 127);
+    height: 6vh;
+}
+
