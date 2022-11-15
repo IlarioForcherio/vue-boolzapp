@@ -89,6 +89,12 @@ flex-basis: 30%;
     background-color:  rgb(234, 234, 234) ;
 }
 
+.right-icons{
+    color:rgb(177, 177, 177) ;
+}
+.right-icons i{
+    padding: 0 5px;
+}
 
 .right-main{
     background-image: url(../img/mine.jpg);
