@@ -19,10 +19,10 @@
 
 <div class="cnt-100 d-flex align-items-center justify-content-center">
     <!-- root-Vue -->
-    <div id="app">
+    <div id="root">
         <!-- main-cnt -->
-        <div class="main-cnt  d-flex ">
-            <!-- left-cnt -->
+        <div class="main-cnt  d-flex">
+            <!-- LEFT-CNT -->
             <div class="left-cnt">
                 <div class="left-top d-flex align-items-center">
                     <!-- avatar -->
@@ -40,7 +40,7 @@
                 <!-- notifications -->
                 <div class="notifications d-flex align-items-center ">
                     <div>
-                        <i class="fa-solid fa-bell-slash ms-3"></i>
+                    <i class="fa-solid fa-bell-slash ms-3"></i>
                     </div>
                     <div class="notifications-text ms-2">
                         <div>Ricevi notifiche di nuovi messaggi</div>
@@ -50,16 +50,20 @@
 
                 </div>
                 <!-- input-search-chat -->
-                <div class="input-group">
+                <div class="mt-2  input-group input-left">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
                         aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <!-- Contacts -->
-                <div class="contacts"></div>
+                <div class="contacts">
+                    <ul>
+                    <li v-for="(element,index) in contacts.length">{{element.name}}</li>
+                    </ul>
+                </div>
 
             </div>
-            <!-- right-cnt -->
+            <!-- RIGHT-CNT -->
             <div class="right-cnt">
                 <!-- right-top -->
                 <div class="right-top d-flex align-items-center justify-content-between">
@@ -76,12 +80,22 @@
                     <div class="message-cnt d-flex justify-content-around">
                         <!-- white-msg -->
                         <div>
-                            <div class="white-msg">messaggio1</div>
+                        <div class="white-msg d-flex align-items-end justify-content-between">
+                           <span class="msg-text">Tutto fatto!</span>
+                           <span class="msg-hour ">10.15</span>
+                        </div>
                         </div>
                         <!-- green-msg -->
                         <div>
-                            <div class="green-msg">messaggio2</div>
-                            <div class="green-msg">messaggio2</div>
+                            <div class="green-msg d-flex align-items-end justify-content-between">
+                                <span class="msg-text">Hai portato a spasso il cane? </span>
+                                <span class="msg-hour ">15.30</span>
+                            </div>
+                            <div class="green-msg d-flex align-items-end justify-content-between">
+                                <span class="msg-text">Ricordati di stendere i panni!</span>
+                                <span class="msg-hour ">15.50</span>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
