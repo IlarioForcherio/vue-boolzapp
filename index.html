@@ -16,7 +16,6 @@
    <title>Vue-boolzap</title>
  </head>
 <body>
-
 <div class="cnt-100 d-flex align-items-center justify-content-center">
     <!-- root-Vue -->
     <div id="root">
@@ -40,7 +39,7 @@
                 <!-- notifications -->
                 <div class="notifications d-flex align-items-center ">
                     <div>
-                    <i class="fa-solid fa-bell-slash ms-3"></i>
+                        <i class="fa-solid fa-bell-slash ms-3"></i>
                     </div>
                     <div class="notifications-text ms-2">
                         <div>Ricevi notifiche di nuovi messaggi</div>
@@ -49,19 +48,31 @@
 
 
                 </div>
-                <!-- input-search-chat -->
+                <!-- Input-search-chat -->
                 <div class="mt-2  input-group input-left">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
                         aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <!-- Contacts -->
-                <div class="contacts">
+                <div class="contacts d-flex align-items-center">
                     <ul>
-                     <li v-for="element in contacts" class="list-group list-group-item list-group-item-action">
-                     <img :src=" imgPath + element.avatar + '.jpg' " alt=“”>
-                    {{element.name}}
-                    </li>
+                        <!-- Cards -->
+                        <li v-for="element in contacts" class=" list-group list-group-item list-group-item-action">
+                            <div class="cards d-flex">
+                                <div class="d-flex align-items-center">
+
+                                    <img :src=" imgPath + element.avatar + '.jpg' " alt=“”>
+                                    <div>
+                                        <div>{{element.name}}</div>
+                                        <div class="cards-text">Ultimo messaggio inviato</div>
+                                    </div>
+                                </div>
+                                <div class="cards-time">
+                                    12:00
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -71,13 +82,13 @@
                 <!-- right-top -->
                 <div class="right-top d-flex align-items-center justify-content-between">
                     <div>
-                       <img :src="imgPath" alt="">
+                        utete cliccato
                     </div>
                     <!-- right-icons -->
                     <div class="right-icons pe-4">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-paperclip"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
                 <div class="right-main d-flex align-items-end">
@@ -85,10 +96,10 @@
                     <div class="message-cnt d-flex justify-content-around">
                         <!-- white-msg -->
                         <div>
-                        <div class="white-msg d-flex align-items-end justify-content-between">
-                           <span class="msg-text">Tutto fatto!</span>
-                           <span class="msg-hour ">10.15</span>
-                        </div>
+                            <div class="white-msg d-flex align-items-end justify-content-between">
+                                <span class="msg-text">Tutto fatto!</span>
+                                <span class="msg-hour ">10.15</span>
+                            </div>
                         </div>
                         <!-- green-msg -->
                         <div>
@@ -100,7 +111,7 @@
                                 <span class="msg-text">Ricordati di stendere i panni!</span>
                                 <span class="msg-hour ">15.50</span>
                             </div>
- 
+
                         </div>
                     </div>
                 </div>
@@ -110,7 +121,8 @@
                     <i class="ps-3 pe-4 fa-regular fa-face-smile"></i>
                     <!-- input -->
                     <div class="input-group ">
-                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username"
+                            aria-describedby="basic-addon1">
                     </div>
                     <!-- microphone -->
                     <i class="pe-3 ps-4 fa-solid fa-microphone"></i>
