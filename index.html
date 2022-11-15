@@ -18,57 +18,81 @@
 <body>
 
 <div class="cnt-100 d-flex align-items-center justify-content-center">
-        <!-- root-Vue -->
-<div id="app">
-    <!-- main-cnt -->
-    <div class="main-cnt  d-flex ">
-        <!-- left-cnt -->
-        <div class="left-cnt">
-            <div class="left-top"></div>
-            <div class="notifications"></div>
-            <!-- input-search-chat -->
-            <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                    aria-describedby="basic-addon1">
-            </div>
-            <!-- Contacts -->
-            <div class="contacts"></div>
-    
-        </div>
-        <!-- right-cnt -->
-        <div class="right-cnt">
-            <div class="right-top"></div>
-            <div class="right-main d-flex align-items-end">
-                <!-- message-cnt -->
-            <div class="message-cnt d-flex justify-content-around">
-                <!-- white-msg -->
-                <div>
-                  <div class="white-msg">messaggio1</div>   
+    <!-- root-Vue -->
+    <div id="app">
+        <!-- main-cnt -->
+        <div class="main-cnt  d-flex ">
+            <!-- left-cnt -->
+            <div class="left-cnt">
+                <div class="left-top d-flex align-items-center">
+                    <!-- avatar -->
+                    <div class="avatar-img">
+                        <img src="./assets/img/avatar_io.jpg" alt="">
+                        <span>Sofia</span>
+                    </div>
+                    <div class="avatar-icons d-flex">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
-                <!-- green-msg -->
-                <div>
-                    <div class="green-msg">messaggio2</div> 
-                    <div class="green-msg">messaggio2</div> 
+                <!-- notifications -->
+                <div class="notifications d-flex align-items-center ">
+                    <div>
+                        <i class="fa-solid fa-bell-slash ms-3"></i>
+                    </div>
+                    <div class="notifications-text ms-2">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+
+
                 </div>
-            </div>
-            </div>
-            <div class="right-bottom d-flex">
+                <!-- input-search-chat -->
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <!-- Contacts -->
+                <div class="contacts"></div>
 
             </div>
+            <!-- right-cnt -->
+            <div class="right-cnt">
+                <div class="right-top"></div>
+                <div class="right-main d-flex align-items-end">
+                    <!-- message-cnt -->
+                    <div class="message-cnt d-flex justify-content-around">
+                        <!-- white-msg -->
+                        <div>
+                            <div class="white-msg">messaggio1</div>
+                        </div>
+                        <!-- green-msg -->
+                        <div>
+                            <div class="green-msg">messaggio2</div>
+                            <div class="green-msg">messaggio2</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right-bottom -->
+                <div class="right-bottom d-flex align-items-center justify-content-center justify-content-between">
+                    <!-- smile -->
+                    <i class="ps-3 pe-4 fa-regular fa-face-smile"></i>
+                    <!-- input -->
+                    <div class="input-group ">
+                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <!-- microphone -->
+                    <i class="pe-3 ps-4 fa-solid fa-microphone"></i>
+                </div>
+            </div>
+            <!-- chiusura main-cnt -->
         </div>
+        <!-- chiusura-root-Vue -->
     </div>
-   
- 
-
-
-
-
-<!-- chiusura-root-Vue -->
-</div> 
-<!--chiusura cnt-100  -->
+    <!--chiusura cnt-100  -->
 </div>
-
 
 
 
