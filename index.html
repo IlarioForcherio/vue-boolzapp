@@ -62,14 +62,14 @@
                             <div class="cards d-flex">
                                 <div class="d-flex align-items-center">
 
-                                    <img :src=" imgPath + element.avatar + '.jpg' " alt=“”>
+                                    <img :src=" imgPath + element.avatar + imgPathext " alt=“”>
                                     <div class="ps-2">
                                         <div>{{element.name}}</div>
-                                        <div class="cards-text">Ultimo messaggio inviato</div>
+                                        <div class="cards-text">{{element.messages[element.messages.length -1].message}}</div>
                                     </div>
                                 </div>
                                 <div class="cards-time">
-                                    12:00
+                                    {{element.messages[element.messages.length -1].date}}
                                 </div>
                             </div>
                         </li>

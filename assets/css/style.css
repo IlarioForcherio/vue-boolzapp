@@ -10,7 +10,7 @@ li{
 
 body{
 background: rgb(35,150,136);
-background: linear-gradient(180deg, rgba(35,150,136,1) 0%, rgba(219,219,210,1) 35%);
+background: linear-gradient(180deg, rgba(35,150,136,1) 20%, rgba(219,219,210,1) 20%);
 }
 
 .cnt-100{  
