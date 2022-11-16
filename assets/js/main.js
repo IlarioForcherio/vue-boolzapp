@@ -2,8 +2,8 @@ var app = new Vue (
     {
         el: '#root',
         data: {
-
-
+           //variabili
+           utenteCliccato:0,
            imgPath: '../assets/img/avatar',
            imgPathext: '.jpg',
             
@@ -173,11 +173,20 @@ var app = new Vue (
 
          
 
+
+
+
         },
 
 
 
         methods: {
+
+            cliccaElemento(element,index){
+                this.utenteCliccato = index;
+            }
+
+            
 
 
 

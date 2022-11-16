@@ -168,17 +168,20 @@ height: 90%;
     font-size: 0.5rem;
 }
 
-.white-msg,.green-msg{
+.received,.sent{
   margin-top: 10px;  
   width: 250px;
   padding: 8px;
   border-radius: 8px;   
 }
 
-.white-msg{
+.received{
+   margin-left:20px;
    background-color: white;
 }
-.green-msg{
+.sent{
+    margin-right: 20px;
+    align-self: flex-end;
     background-color:rgb(213, 249, 186);
  }
 
