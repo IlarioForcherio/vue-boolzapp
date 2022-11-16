@@ -119,8 +119,6 @@
                                 <span class="msg-text">{{element.message}} </span>
                                 <span class="msg-hour ">15.30</span>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -128,9 +126,9 @@
                 <div class="right-bottom d-flex align-items-center justify-content-center justify-content-between">
                     <!-- Smile -->
                     <i class="ps-3 pe-4 fa-regular fa-face-smile"></i>
-                    <!-- Input -->
+                    <!-- Input-user -->
                     <div class="input-group ">
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username"
+                        <input @keyup.enter="inputMessage" v-model="inputUser" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username"
                             aria-describedby="basic-addon1">
                     </div>
                     <!-- Microphone -->

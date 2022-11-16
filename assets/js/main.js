@@ -3,8 +3,13 @@ var app = new Vue (
         el: '#root',
         data: {
            //variabili
+           
            utenteCliccato:0,
+           
+           inputUser:'',
+           
            imgPath: '../assets/img/avatar',
+           
            imgPathext: '.jpg',
             
             contacts: [
@@ -184,7 +189,38 @@ var app = new Vue (
 
             cliccaElemento(element,index){
                 this.utenteCliccato = index;
-            }
+            },
+
+          
+
+
+            inputMessage: function(){
+                
+                let messaggiContatto = this.contacts[this.utenteCliccato].messages;
+
+                messaggiContatto.push( 
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message:this.inputUser,
+                        status: 'sent'
+                    }
+                )
+                this.inputUser = '';
+
+                setTimeout(() => {
+                    
+                    messaggiContatto.push( 
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message:'ok',
+                            status: 'received'
+                        }
+                    )
+
+
+                  }, "1000")
+
+               },
 
             
 
