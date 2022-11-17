@@ -5,8 +5,10 @@ var app = new Vue (
            //variabili
            
            utenteCliccato:0,
-           
+           //input messaggio
            inputUser:'',
+           //input cercanome
+           inputContact:'',
            
            imgPath: '../assets/img/avatar',
            
@@ -221,6 +223,30 @@ var app = new Vue (
                   }, "1000")
 
                },
+
+            //    lastHourMessage(element){
+            //     let date = element.date;
+            //     date = date.split('');
+            //     return date[1];
+            //    }
+            
+            searchName: function () {
+                this.contacts.forEach((element, index) => {
+
+                    let visible = element.visible;
+                    let names = element.name;
+                    //console.log(names)
+                    if (names.includes(this.inputContact)) {
+                        visible = true;
+                    } else {
+                        visible = false;
+                    }
+
+
+
+                });
+            },
+               
 
             
 
