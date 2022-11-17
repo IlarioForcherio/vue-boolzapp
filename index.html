@@ -2,154 +2,155 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  <!-- font-awsome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-   integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <!-- css -->
-   <link rel="stylesheet" href="./assets/css/style.css">
-   <title>Vue-boolzap</title>
- </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Vue-boolzap</title>
+</head>
+
 <body>
-<div class="cnt-100 d-flex align-items-center justify-content-center">
-    <!-- root-Vue -->
-    <div id="root">
-        <!-- main-cnt -->
-        <div class="main-cnt  d-flex">
-            <!-- LEFT-CNT -->
-            <div class="left-cnt">
-                <div class="left-top d-flex align-items-center">
-                    <!-- avatar -->
-                    <div class="avatar-img ps-2">
-                        <img src="./assets/img/avatar_io.jpg" alt="">
-                        <span>Sofia</span>
-                    </div>
-                    <!-- avatar-icons -->
-                    <div class="avatar-icons d-flex pe-2">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-                <!-- notifications -->
-                <div class="notifications d-flex align-items-center">
-                    <div>
-                        <i class="fa-solid fa-bell-slash ms-3"></i>
-                    </div>
-                    <div class="notifications-text ms-2">
-                        <div>Ricevi notifiche di nuovi messaggi</div>
-                        <a href="#">Attiva notifiche desktop</a>
-                    </div>
-
-
-                </div>
-                <!-- Input-search-chat -->
-                <div class="input-group input-left">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input @keyup="searchName"
-                     v-model="inputContact" 
-                    type="text" class="form-control"
-                     placeholder="Cerca o inizia una nuova chat"
-                    aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <!-- Contacts -->
-                <div class="contacts d-flex align-items-center">
-                    <ul>
-                        <!-- Cards -->
-                        <li v-for="(element,index) in contacts" 
-                        @click="cliccaElemento(element,index)"
-                        v-if="element.visible == true"
-                        
-                         class=" list-group list-group-item list-group-item-action">
-                            <div class="cards d-flex">
-                                <div class="d-flex align-items-center">
-
-                                    <img :src=" imgPath + element.avatar + imgPathext " alt=“”>
-                                    <div class="ps-2">
-                                        <div>{{element.name}}</div>
-                                        <div class="cards-text">{{element.messages[element.messages.length -1].message}}</div>
-                                    </div>
-                                </div>
-                                <div class="cards-time">
-                                    {{element.messages[element.messages.length -1].date}}
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <!-- RIGHT-CNT -->
-            <div class="right-cnt">
-                <!-- Right-top -->
-                <div class="ps-2 right-top d-flex align-items-center justify-content-between">
-                    <!-- Card-top -->
-                    <div class="card-top-right d-flex">
-                        <div class="d-flex align-items-center">
-                            <img :src="imgPath + contacts[utenteCliccato].avatar + imgPathext" alt=“”>
-                            <div class="ps-2">
-                                <div>{{contacts[utenteCliccato].name}}</div>
-                                <div class="cards-text">Ultimo accesso oggi alle 12:00</div>
-                            </div>
+    <div class="cnt-100 d-flex align-items-center justify-content-center">
+        <!-- root-Vue -->
+        <div id="root">
+            <!-- main-cnt -->
+            <div class="main-cnt  d-flex">
+                <!-- LEFT-CNT -->
+                <div class="left-cnt">
+                    <div class="left-top d-flex align-items-center">
+                        <!-- avatar -->
+                        <div class="avatar-img ps-2">
+                            <img src="./assets/img/avatar_io.jpg" alt="">
+                            <span>Sofia</span>
+                        </div>
+                        <!-- avatar-icons -->
+                        <div class="avatar-icons d-flex pe-2">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-   
-                    <!-- Right-icons -->
-                    <div class="right-icons pe-4">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-                <div class="right-main d-flex align-items-end">
-                    <!-- Message-cnt -->
-                    <div class="message-cnt ">
-                        <!-- received -->
-                        <div class="d-flex flex-column">
-                            <div v-for="(element,index) in contacts[utenteCliccato].messages"
-                            :class="(element.status == 'sent') ?  'sent' : 'received' "
-                            class=" d-flex align-items-end justify-content-between">
-                            <!-- messaggio-chat -->
-                                <span class="msg-text">{{element.message}} </span>
-                                <!-- menu a tendina  -->
-                                <div class="d-flex flex-column" >
-                                 
-                                <i class="fa-solid fa-chevron-down d-clock align-self-end "></i>  
-        
-                                 <!--data e ora  -->
-                                <div class="msg-hour ">15.30</div>    
-                                </div>
-                             
-                            </div>
+                    <!-- notifications -->
+                    <div class="notifications d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-bell-slash ms-3"></i>
                         </div>
+                        <div class="notifications-text ms-2">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+
+
                     </div>
-                </div>
-                <!-- Right-bottom -->
-                <div class="right-bottom d-flex align-items-center justify-content-center justify-content-between">
-                    <!-- Smile -->
-                    <i class="ps-3 pe-4 fa-regular fa-face-smile"></i>
-                    <!-- Input-user -->
-                    <div class="input-group ">
-                        <input @keyup.enter="inputMessage" v-model="inputUser" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username"
+                    <!-- Input-search-chat -->
+                    <div class="input-group input-left">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="fa-solid fa-magnifying-glass"></i></span>
+                        <input @keyup="searchName" v-model="inputContact" type="text" class="form-control"
+                            placeholder="Cerca o inizia una nuova chat" aria-label="Username"
                             aria-describedby="basic-addon1">
                     </div>
-                    <!-- Microphone -->
-                    <i class="pe-3 ps-4 fa-solid fa-microphone"></i>
+                    <!-- Contacts -->
+                    <div class="contacts d-flex align-items-center">
+                        <ul>
+                            <!-- Cards -->
+                            <li v-for="(element,index) in contacts" @click="cliccaElemento(element,index)"
+                                v-if="element.visible == true"
+                                class=" list-group list-group-item list-group-item-action">
+                                <div class="cards d-flex">
+                                    <div class="d-flex align-items-center">
+
+                                        <img :src=" imgPath + element.avatar + imgPathext " alt=“”>
+                                        <div class="ps-2">
+                                            <div>{{element.name}}</div>
+                                            <div class="cards-text">{{element.messages[element.messages.length
+                                                -1].message}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="cards-time">
+                                        {{element.messages[element.messages.length -1].date}}
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
+                <!-- RIGHT-CNT -->
+                <div class="right-cnt">
+                    <!-- Right-top -->
+                    <div class="ps-2 right-top d-flex align-items-center justify-content-between">
+                        <!-- Card-top -->
+                        <div class="card-top-right d-flex">
+                            <div class="d-flex align-items-center">
+                                <img :src="imgPath + contacts[utenteCliccato].avatar + imgPathext" alt=“”>
+                                <div class="ps-2">
+                                    <div>{{contacts[utenteCliccato].name}}</div>
+                                    <div class="cards-text">Ultimo accesso oggi alle 12:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right-icons -->
+                        <div class="right-icons pe-4">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="right-main d-flex align-items-end">
+                        <!-- Message-cnt -->
+                        <div class="message-cnt ">
+                            <!-- received -->
+                            <div class="d-flex flex-column">
+                                <div v-for="(element,index) in contacts[utenteCliccato].messages"
+                                    :class="(element.status == 'sent') ?  'sent' : 'received' "
+                                    class=" d-flex align-items-end justify-content-between">
+                                    <!-- messaggio-chat -->
+                                    <span class="msg-text">{{element.message}} </span>
+                                    <!-- menu a tendina  -->
+                                    <div class="down-arrow d-flex flex-column">
+                                        <i data-bs-toggle="dropdown"
+                                            class=" fa-solid fa-chevron-down d-clock align-self-end "></i>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Cancella messaggio</a></li>
+                                        </ul>
+                                        <!--data e ora  -->
+                                        <div class="msg-hour ">15.30</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right-bottom -->
+                    <div class="right-bottom d-flex align-items-center justify-content-center justify-content-between">
+                        <!-- Smile -->
+                        <i class="ps-3 pe-4 fa-regular fa-face-smile"></i>
+                        <!-- Input-user -->
+                        <div class="input-group ">
+                            <input @keyup.enter="inputMessage" v-model="inputUser" type="text" class="form-control"
+                                placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <!-- Microphone -->
+                        <i class="pe-3 ps-4 fa-solid fa-microphone"></i>
+                    </div>
+                </div>
+                <!-- chiusura main-cnt -->
             </div>
-            <!-- chiusura main-cnt -->
+            <!-- chiusura-root-Vue -->
         </div>
-        <!-- chiusura-root-Vue -->
+        <!--chiusura cnt-100  -->
     </div>
-    <!--chiusura cnt-100  -->
-</div>
-
-
 
 
 
