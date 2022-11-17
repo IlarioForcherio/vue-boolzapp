@@ -251,16 +251,11 @@ var app = new Vue (
             },
 
 
-            deleteMessage: function(messages,index){
-               console.log(messages)
+            deleteMessage: function(messages){
+               
+             messages.splice(0,3)
 
-
-            //  this.contacts.forEach((element) =>{
-            //     console.log(element.messages)
-            //     element.messages.splice(0,3)
-                
-                
-            //  })
+            
             }
                
 

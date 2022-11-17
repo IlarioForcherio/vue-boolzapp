@@ -112,20 +112,20 @@
                         <div class="message-cnt ">
                             <!-- received -->
                             <div class="d-flex flex-column">
-                                <div v-for="(element,index) in contacts[utenteCliccato].messages"
-                                    :class="(element.status == 'sent') ?  'sent' : 'received' "
+                                <div v-for="(messages,index) in contacts[utenteCliccato].messages"
+                                    :class="(messages.status == 'sent') ?  'sent' : 'received' "
                                     class=" d-flex align-items-end justify-content-between">
                                     <!-- messaggio-chat -->
-                                    <span class="msg-text">{{element.message}} </span>
+                                    <span class="msg-text">{{messages.message}} </span>
                                     <!-- menu a tendina  -->
                                     <div class="down-arrow d-flex flex-column">
                                         <i data-bs-toggle="dropdown"
                                             class=" fa-solid fa-chevron-down d-clock align-self-end "></i>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Cancella messaggio</a></li>
+                                            <li><a @click="deleteMessage(messages)" class="dropdown-item" href="#">Cancella messaggio</a></li>
                                         </ul>
                                         <!--data e ora  -->
-                                        <div class="msg-hour ">15.30</div>
+                                        <div class="msg-hour ">{{messages.date}}</div>
                                     </div>
 
                                 </div>
