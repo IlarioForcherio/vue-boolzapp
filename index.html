@@ -64,7 +64,7 @@
                         <li v-for="(element,index) in contacts" 
                         @click="cliccaElemento(element,index)"
                         v-if="element.visible == true"
-                        :class="(element.visible == true) ? 'd-block'  : 'd-none' "
+                        
                          class=" list-group list-group-item list-group-item-action">
                             <div class="cards d-flex">
                                 <div class="d-flex align-items-center">
@@ -114,8 +114,17 @@
                             <div v-for="(element,index) in contacts[utenteCliccato].messages"
                             :class="(element.status == 'sent') ?  'sent' : 'received' "
                             class=" d-flex align-items-end justify-content-between">
+                            <!-- messaggio-chat -->
                                 <span class="msg-text">{{element.message}} </span>
-                                <span class="msg-hour ">15.30</span>
+                                <!-- menu a tendina  -->
+                                <div class="d-flex flex-column" >
+                                 
+                                <i class="fa-solid fa-chevron-down d-clock align-self-end "></i>  
+        
+                                 <!--data e ora  -->
+                                <div class="msg-hour ">15.30</div>    
+                                </div>
+                             
                             </div>
                         </div>
                     </div>

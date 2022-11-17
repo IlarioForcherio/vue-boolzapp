@@ -233,13 +233,16 @@ var app = new Vue (
             searchName: function () {
                 this.contacts.forEach((element, index) => {
 
-                    let visible = element.visible;
+
                     let names = element.name;
                     //console.log(names)
-                    if (names.includes(this.inputContact)) {
-                        visible = true;
+                    if (
+                    names.includes(this.inputContact) ||
+                    element.name.toLowerCase().includes(this.inputContact) ||
+                    element.name.toUpperCase().includes(this.inputContact)) {
+                        element.visible = true;
                     } else {
-                        visible = false;
+                        element.visible = false;
                     }
 
 
