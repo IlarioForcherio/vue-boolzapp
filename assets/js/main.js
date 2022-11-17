@@ -249,6 +249,19 @@ var app = new Vue (
 
                 });
             },
+
+
+            deleteMessage: function(messages,index){
+               console.log(messages)
+
+
+            //  this.contacts.forEach((element) =>{
+            //     console.log(element.messages)
+            //     element.messages.splice(0,3)
+                
+                
+            //  })
+            }
                
 
             
