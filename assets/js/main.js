@@ -10,7 +10,7 @@ var app = new Vue (
            //input cercanome
            inputContact:'',
            
-           imgPath: '../assets/img/avatar',
+           imgPath: './assets/img/avatar',
            
            imgPathext: '.jpg',
             
