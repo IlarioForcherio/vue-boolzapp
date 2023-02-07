@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Vue-boolzap</title>
 </head>
-
-<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
     <div class="cnt-100 d-flex align-items-center justify-content-center">
         <!-- root-Vue -->
         <div id="root">
@@ -29,8 +30,8 @@
                     <div class="left-top d-flex align-items-center">
                         <!-- avatar -->
                         <div class="avatar-img ps-2">
-                            <img src="./assets/img/avatar_io.jpg" alt="">
-                            <span>Sofia</span>
+                            <img src="./assets/img/avatar_3.jpg" alt="">
+                            <span>Ilario</span>
                         </div>
                         <!-- avatar-icons -->
                         <div class="avatar-icons d-flex pe-2">
@@ -83,7 +84,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <!-- RIGHT-CNT -->
                 <div class="right-cnt">
@@ -99,30 +99,31 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Right-icons -->
                         <div class="right-icons pe-4">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
+                        </div> 
                     </div>
                     <div class="right-main d-flex align-items-end">
                         <!-- Message-cnt -->
-                        <div class="message-cnt ">
+                        <div class="message-cnt">
                             <!-- received -->
                             <div class="d-flex flex-column">
                                 <div v-for="(messages,index) in contacts[utenteCliccato].messages"
                                     :class="(messages.status == 'sent') ?  'sent' : 'received' "
                                     class=" d-flex align-items-end justify-content-between">
                                     <!-- messaggio-chat -->
-                                    <span class="msg-text">{{messages.message}} </span>
+                                    <span class="msg-text">{{messages.message}}</span>
                                     <!-- menu a tendina  -->
                                     <div class="down-arrow d-flex flex-column">
                                         <i data-bs-toggle="dropdown"
                                             class=" fa-solid fa-chevron-down d-clock align-self-end "></i>
                                         <ul class="dropdown-menu">
-                                         <li><a @click="deleteMessage(messages)" class="dropdown-item" href="#">Cancella messaggio</a></li>
+                                         <li><a @click="deleteMessage(messages,index)" class="dropdown-item" href="#">
+                                            Cancella messaggio
+                                        </a></li>
                                         </ul>
                                         <!--data e ora  -->
                                         <div class="msg-hour ">{{messages.date}}</div>
@@ -150,6 +151,11 @@
         </div>
         <!--chiusura cnt-100  -->
     </div>
+
+        </div>
+    </div>
+</div>
+<body>
 
 
 

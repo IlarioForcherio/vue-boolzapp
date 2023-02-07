@@ -251,9 +251,31 @@ var app = new Vue (
             },
 
 
-            deleteMessage: function(messages){
-               
-             messages.splice(0,3)
+            deleteMessage: function(messages,index){
+              //console.log(messages,index) 
+              //console.log(index)
+             
+
+              //return messages.splice(0,3);
+              this.contacts.forEach((element,index)=>{
+                //console.log(element.index)
+                if(this.contacts[index].name == this.contacts[this.utenteCliccato].name ){
+
+                    this.contacts[index].messages.forEach((message,ind)=>{
+                        console.log(message,ind)
+                        if(message.message == messages.message){
+                          console.log(message,ind)
+                          this.contacts[index].messages.splice(ind,1)  
+                        }
+                        
+                    })
+                }
+            
+                //element.messages.splice(0,3)
+              })
+
+
+
 
             
             }

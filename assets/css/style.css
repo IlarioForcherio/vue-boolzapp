@@ -149,7 +149,8 @@ flex-basis: 30%;
 }
 
 .right-main{
-    background-image: url(../img/mine.jpg);
+    overflow-y: auto;
+    background-image: url('../img/mine.jpg');
     height: 80%;
 }
 
@@ -191,9 +192,10 @@ height: 90%;
  }
  
  .fa-chevron-down{
-    
+    display: none;
     font-size: 0.6rem;
  }
+
 
  .down-arrow:hover > .fa-chevron-down{
     display: block;
